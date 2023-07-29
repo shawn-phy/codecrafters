@@ -61,12 +61,12 @@ mydocker run ubuntu:latest /usr/local/bin/docker-explorer echo hey
 To test this behaviour locally, you could use the echo + echo_stderr commands that docker-explorer exposes. Run docker-explorer --help to view usage.
 
 ### stuff I  had to read on to accomplish this:
-> linux system calls
-> linux library calls
-> pipe[]
-> types.h library in c
-> wexit status
-> child process and fork 
+[] linux system calls
+[] linux library calls
+[]pipe[]
+[]types.h library in c
+[] wexit status
+[] child process and fork 
 
 # stage 4
 In the previous stage, we executed a program that existed locally on our machine. This program had write access to the whole filesystem, which means that it could do dangerous things!
