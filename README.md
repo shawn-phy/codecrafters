@@ -47,6 +47,10 @@ You can now execute your program like this:
 ```sh
 mydocker run ubuntu:latest /usr/local/bin/docker-explorer echo hey
 ```
+
+### stuff I  had to read on to accomplish this:
+> child process and fork
+>
 # stage 3: Handle exit codes 
 You'll now pipe the program's stdout and stderr to the parent process.
 
@@ -55,3 +59,18 @@ Like the last stage, the tester will run your program like this:
 mydocker run ubuntu:latest /usr/local/bin/docker-explorer echo hey
 ```
 To test this behaviour locally, you could use the echo + echo_stderr commands that docker-explorer exposes. Run docker-explorer --help to view usage.
+
+### stuff I  had to read on to accomplish this:
+> linux system calls
+> linux library calls
+> pipe[]
+> types.h library in c
+> wexit status
+> child process and fork 
+
+# stage 4
+In the previous stage, we executed a program that existed locally on our machine. This program had write access to the whole filesystem, which means that it could do dangerous things!
+
+In this stage, you'll use chroot to ensure that the program you execute doesn't have access to any files on the host machine. Create an empty temporary directory and chroot into it when executing the command. You'll need to copy the binary being executed too.
+
+Just like the previous stage, the tester will run your program like this:
