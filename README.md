@@ -65,7 +65,7 @@ To test this behaviour locally, you could use the echo + echo_stderr commands th
 - [ ] linux library calls
 - [ ] pipe[] in c
 - [ ] types.h library in c
-- [ x ] wexit status
+- [x] wexit status
 - [ ] child process and fork 
 
 # stage 4
