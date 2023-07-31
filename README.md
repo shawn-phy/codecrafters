@@ -74,3 +74,7 @@ In the previous stage, we executed a program that existed locally on our machine
 In this stage, you'll use chroot to ensure that the program you execute doesn't have access to any files on the host machine. Create an empty temporary directory and chroot into it when executing the command. You'll need to copy the binary being executed too.
 
 Just like the previous stage, the tester will run your program like this:
+
+
+### stuff i had to  lear to accomplish this 
+- [x] chroot
